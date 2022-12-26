@@ -1,5 +1,7 @@
 package JavaDS;
 import java.util.*;
+
+// Time: O(n), Space: O(1)
 public class factorial {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
@@ -14,4 +16,3 @@ public class factorial {
         return fact(n-1)*n;
     }
 }
-
