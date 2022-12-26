@@ -12,12 +12,14 @@ public class palindrome {
     }
     public static boolean pal(int n){
         int m,r=0;
+        if(n<0 || n%10==0 && n/10!=0)
+            return false;
         while(r<n) {
             m = n % 10;
             r = 10 * r + m;
             n = n / 10;
         }
-        if(r==n || n==r/10){
+        if (r == n || n == r / 10) {
             return true;
         }
         return false;
