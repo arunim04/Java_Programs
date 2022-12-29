@@ -1,4 +1,4 @@
-package JavaDS;
+package JavaDS.numbers;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package JavaDS;
+package JavaDS.numbers;
 import java.util.*;
 
 // Time: O(n), Space: O(1)
