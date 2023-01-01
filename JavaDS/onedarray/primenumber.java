@@ -2,6 +2,8 @@ package JavaDS.onedarray;
 
 import java.util.Scanner;
 
+// Time: O(log n), Space: O(1)
+
 public class primenumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
