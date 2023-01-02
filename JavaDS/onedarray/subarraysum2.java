@@ -20,6 +20,7 @@ public class subarraysum2 {
         checksum(num,b);
     }
     public static void checksum(int[] num,int b){
+        //we are taking map to store array indexes of array values so that we can fetch index of a value in O(1)
         Map<Integer,Integer> c=new HashMap<>();
         int sum=0;
         for(int i=0;i<num.length;i++) {

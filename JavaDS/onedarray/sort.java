@@ -37,9 +37,11 @@ public class sort {
                     pos = j;
                 System.out.println("pos="+pos);
             }
-            temp = array[i];
-            array[i] = array[pos];
-            array[pos] = temp;
+            if(i!=pos) {
+                temp = array[i];
+                array[i] = array[pos];
+                array[pos] = temp;
+            }
         }
     }
 }
