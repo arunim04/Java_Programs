@@ -23,8 +23,8 @@ public class exponent {
     public static int expoo(int a,int b){
         if(b==0)
             return 1;
-        if (b % 2 == 0)
-            return expoo(a * a, b / 2);
+        if (b % 2 == 0)  //b%2 can be written as b&1
+            return expoo(a * a, b / 2);  //b/2 can be written as b>>1
         return a * expoo(a, b-1);
     }
 }
