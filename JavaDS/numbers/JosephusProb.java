@@ -1,6 +1,8 @@
 package JavaDS.numbers;
 import java.util.Scanner;
 
+// Time: O(n), Space: O(n)
+
 public class JosephusProb {
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
