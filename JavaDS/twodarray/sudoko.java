@@ -1,5 +1,7 @@
 package JavaDS.twodarray;
 
+// Time: O(9^(N*N)), Space: O(9^(N*N))
+
 public class sudoko {
     public static boolean isSafe(int[][] board,int row,int col,int num){
         for(int d=0;d< board.length;d++){
