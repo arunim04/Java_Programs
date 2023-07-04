@@ -1,6 +1,7 @@
 package JavaDS.onedarray;
 
 import java.util.Scanner;
+//Time: O(n^2)
 
 public class BubbleSort {
     public static void main(String args[]){
