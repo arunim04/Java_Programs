@@ -1,6 +1,7 @@
 package JavaDS.onedarray;
 
 import java.util.Scanner;
+//Time: O(n(logn))  Space: O(n)
 
 public class MergeSort {
     public static void main(String args[]){
