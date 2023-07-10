@@ -2,6 +2,8 @@ package JavaDS.onedarray;
 
 import java.util.Scanner;
 
+// Time: O(log2(n)), Space: O(1)
+
 public class BinarySearchWithRotatedArray {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
