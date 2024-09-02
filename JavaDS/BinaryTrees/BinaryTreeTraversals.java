@@ -1,8 +1,6 @@
 package JavaDS.BinaryTrees;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class BinaryTreeTraversals {
     static class Node {
@@ -61,6 +59,48 @@ public class BinaryTreeTraversals {
             System.out.print(tmp.data + " ");
             if (tmp.left != null) q.add(tmp.left);
             if (tmp.right != null) q.add(tmp.right);
+        }
+    }
+
+    // Time: O(nlogn), Space: O(n)
+    public static ArrayList<Integer> verticalOrder(Node root){
+        Queue<Pair> q=new ArrayDeque<>();
+        Map<Integer,ArrayList<Integer>> map=new TreeMap<>();
+
+        q.add(new Pair(0,root));
+        while (!q.isEmpty()){
+            Pair cur=q.poll();
+            if(map.containsKey(cur.hd)){
+                map.get(cur.hd).add(cur.node.data);
+            }
+            else{
+                ArrayList<Integer> temp=new ArrayList<>();
+                temp.add(cur.node.data);
+                map.put(cur.hd,temp);
+            }
+
+            if(cur.node.left!=null){
+                q.add(new Pair(cur.hd-1,cur.node.left));
+            }
+            if(cur.node.right!=null){
+                q.add(new Pair(cur.hd+1,cur.node.right));
+            }
+        }
+
+        ArrayList<Integer> ans=new ArrayList<>();
+        for(Map.Entry<Integer,ArrayList<Integer>> entry:map.entrySet()){
+            ans.addAll(entry.getValue());
+        }
+        return ans;
+    }
+
+    static class Pair{
+        int hd; //horizontal distance
+        Node node;
+
+        public Pair(int hd,Node node){
+            this.node=node;
+            this.hd=hd;
         }
     }
 
